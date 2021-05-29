@@ -1,0 +1,64 @@
+//
+//  DBVatLieu.swift
+//  Quan Ly Ban Hang Vat Lieu Xay
+//
+//  Created by MacOS on 5/29/21.
+//  Copyright © 2021 DoAnIOS. All rights reserved.
+//
+
+import Firebase
+
+class DBVatLieu {
+    var db = Firestore.firestore().collection("VatLieu")
+    
+    func addVatLieu(vl: VatLieu, completion: @escaping (Error?)->()) {
+        let id = db.document().documentID
+        vl.id = id
+        
+        db.document(id).setData(vl.getData()){
+            error in
+            completion(error)
+        }
+    }
+    
+    func delVatLieu(id: String, completion: @escaping (Error?)->()) {
+        db.document(id).delete(){
+            error in
+            completion(error)
+        }
+    }
+    
+    func editVatLieu(vl: VatLieu, completion: @escaping (Error?)->()) {
+        db.document(vl.id).setData(vl.getData()){
+            error in
+            completion(error)
+        }
+    }
+    
+    func getVatLieu(completion: @escaping ([VatLieu]?)->()) {
+        db.getDocuments { (snap, error) in
+            if let snap = snap?.documents, error == nil {
+                var arr = [VatLieu]()
+                for item in snap {
+                    arr.append(VatLieu(data: item.data()))
+                }
+                completion(arr)
+            }
+        }
+    }
+    
+    func search(key: String, completion: @escaping ([VatLieu]?)->()) {
+        db.getDocuments { (snap, error) in
+            if let snap = snap?.documents, error == nil {
+                var arr = [VatLieu]()
+                for item in snap {
+                    let temp = VatLieu(data: item.data())
+                    if temp.ten.contains(key) {
+                        arr.append(temp)
+                    }
+                }
+                completion(arr)
+            }
+        }
+    }
+}
