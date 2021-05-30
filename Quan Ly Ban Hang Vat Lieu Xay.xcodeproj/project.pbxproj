@@ -25,6 +25,7 @@
 		22D8F9932661E94D00FBF0C6 /* NhaCungCapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D8F9922661E94D00FBF0C6 /* NhaCungCapTableViewCell.swift */; };
 		22D9B7AA26625810005026AF /* DBVatLieu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D9B7A926625810005026AF /* DBVatLieu.swift */; };
 		22D9B7AC26625A18005026AF /* AddVatLieuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D9B7AB26625A18005026AF /* AddVatLieuViewController.swift */; };
+		22DED11226632540008BEDA2 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DED11126632540008BEDA2 /* CustomStackView.swift */; };
 		22E844DC26619BA2008850EF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E844DB26619BA2008850EF /* CustomTextField.swift */; };
 		22E844DF2661A6D3008850EF /* DBNhanVien.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E844DE2661A6D3008850EF /* DBNhanVien.swift */; };
 		22E844E12661AF68008850EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22E844E02661AF68008850EF /* GoogleService-Info.plist */; };
@@ -71,6 +72,7 @@
 		22D8F9922661E94D00FBF0C6 /* NhaCungCapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NhaCungCapTableViewCell.swift; sourceTree = "<group>"; };
 		22D9B7A926625810005026AF /* DBVatLieu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBVatLieu.swift; sourceTree = "<group>"; };
 		22D9B7AB26625A18005026AF /* AddVatLieuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVatLieuViewController.swift; sourceTree = "<group>"; };
+		22DED11126632540008BEDA2 /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
 		22E844DB26619BA2008850EF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		22E844DE2661A6D3008850EF /* DBNhanVien.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBNhanVien.swift; sourceTree = "<group>"; };
 		22E844E02661AF68008850EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				22E844DB26619BA2008850EF /* CustomTextField.swift */,
 				22E844E22661C1D6008850EF /* CustomButton.swift */,
 				22A35D4326626D64001C5991 /* CustomTextView.swift */,
+				22DED11126632540008BEDA2 /* CustomStackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				2225D9DA266134E500FD018B /* NhanVien.swift in Sources */,
 				2225D9D8266134B100FD018B /* KhachHang.swift in Sources */,
 				22D9B7AC26625A18005026AF /* AddVatLieuViewController.swift in Sources */,
+				22DED11226632540008BEDA2 /* CustomStackView.swift in Sources */,
 				22E844E92661D8F4008850EF /* DBNhaCungCap.swift in Sources */,
 				2225D9B82661327100FD018B /* DangKyViewController.swift in Sources */,
 				22E844EB2661E637008850EF /* QLNhaCungCapViewController.swift in Sources */,

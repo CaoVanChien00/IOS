@@ -15,11 +15,11 @@ class VatLieu {
     var thongTin: String
     var soLuong: Int
     var donViTinh: String
-    var donGia: String
+    var donGia: Double
     var nhaCungCap: String
     
     //Khoi tao du lieu bang thong tin cho truoc
-    init(id: String, hinh: String, ten: String, thongTin: String, soLuong: Int, donViTinh: String, donGia: String, nhaCungCap: String) {
+    init(id: String, hinh: String, ten: String, thongTin: String, soLuong: Int, donViTinh: String, donGia: Double, nhaCungCap: String) {
         self.id = id
         self.hinh = hinh
         self.ten = ten
@@ -38,7 +38,7 @@ class VatLieu {
         self.thongTin = data["thongTin"] as! String
         self.soLuong = data["soLuong"] as! Int
         self.donViTinh = data["donViTinh"] as! String
-        self.donGia = data["donGia"] as! String
+        self.donGia = data["donGia"] as! Double
         self.nhaCungCap = data["nhaCungCap"] as! String
     }
     

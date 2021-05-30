@@ -70,6 +70,7 @@ class QLNhaCungCapViewController: UIViewController, UITableViewDelegate, UITable
     func clearForm() {
         self.tfDiaChi.text = ""
         self.tfTen.text = ""
+        self.btn.setTitle("Thêm", for: .normal)
     }
     
     // upload du lieu len form de chinh sua
@@ -96,7 +97,7 @@ class QLNhaCungCapViewController: UIViewController, UITableViewDelegate, UITable
     func getNCCAdd() -> NhaCungCap? {
         
         if tfTen.text! == "" || tfDiaChi.text! == "" {
-            showAlert(title: "Chú ý", message: "Bạn chua nhập tên hoặc địa chỉ")
+            showAlert(title: "Chú ý", message: "Bạn chua nhập tên hoặc địa chỉ", action: nil)
             return nil
         }
         
@@ -107,17 +108,53 @@ class QLNhaCungCapViewController: UIViewController, UITableViewDelegate, UITable
     func getNCCEdit() -> NhaCungCap? {
         
         if tfTen.text! == "" || tfDiaChi.text! == "" {
-            showAlert(title: "Chú ý", message: "Bạn chua nhập tên hoặc địa chỉ")
+            showAlert(title: "Chú ý", message: "Bạn chua nhập tên hoặc địa chỉ", action: nil)
             return nil
         }
         return NhaCungCap(id: arrNCC[iSelect].id, ten: tfTen.text!, diaChi: tfDiaChi.text!)
         
     }
     
-    //ham hien thi canh bao
-    func showAlert(title: String, message: String) {
+    var viewLoading: UIView?
+    
+    var lable: UILabel?
+    func showLoading(title: String) {
+        if let viewLoading = viewLoading, let lable = lable {
+            lable.text = title
+            viewLoading.isHidden = false
+        } else {
+            viewLoading = UIView()
+            viewLoading!.frame = view.frame
+            viewLoading!.backgroundColor = UIColor(red: 100/255, green: 100/255, blue: 100/255, alpha: 0.5)
+            
+            let width = UIScreen.main.bounds.width
+            let height = UIScreen.main.bounds.height
+            
+            lable = UILabel()
+            lable!.frame = CGRect(x: (width * 0.2) / 2, y: (height * 0.9) / 2, width: width * 0.8, height: height * 0.1)
+            lable!.text = title
+            lable!.textAlignment = .center
+            lable!.textColor = .white
+            lable!.font = UIFont.boldSystemFont(ofSize: 20.0)
+            
+            viewLoading?.addSubview(lable!)
+            view.addSubview(viewLoading!)
+        }
+    }
+    
+    func hideLoading() {
+        if let viewLoading = viewLoading {
+            viewLoading.isHidden = true
+        }
+    }
+    
+    //hien thi thong bao
+    func showAlert(title: String, message: String, action: ((UIAlertAction)->())?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default) {
+            ac in
+            action?(ac)
+        })
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -125,11 +162,18 @@ class QLNhaCungCapViewController: UIViewController, UITableViewDelegate, UITable
     @IBAction func btnAction(_ sender: UIButton) {
         if sender.titleLabel?.text! == "Thêm" {
             if let ncc = getNCCAdd() {
+                showLoading(title: "Đang thêm, Đợi tí...")
                 db!.addNCC(ncc: ncc) { (error) in
                     if error != nil {
-                        self.showAlert(title: "Lỗi", message: "Thêm thất bại")
+                        self.showAlert(title: "Lỗi", message: "Thêm thất bại"){
+                            _ in
+                            self.hideLoading()
+                        }
                     }else {
-                        self.showAlert(title: "Thành công", message: "Thêm thành công")
+                        self.showAlert(title: "Thành công", message: "Thêm thành công"){
+                            _ in
+                            self.hideLoading()
+                        }
                         self.clearForm()
                         self.iSelect = -1
                         self.loadData()
@@ -138,11 +182,18 @@ class QLNhaCungCapViewController: UIViewController, UITableViewDelegate, UITable
             }
         } else if sender.titleLabel?.text! == "Sửa" {
             if let ncc = getNCCEdit() {
+                showLoading(title: "Đang sửa, Đợi tí...")
                 db!.editNCC(ncc: ncc) { (error) in
                     if error != nil {
-                        self.showAlert(title: "Lỗi", message: "Sửa thất bại")
+                        self.showAlert(title: "Lỗi", message: "Sửa thất bại"){
+                            _ in
+                            self.hideLoading()
+                        }
                     }else {
-                        self.showAlert(title: "Thành công", message: "Sửa thành công")
+                        self.showAlert(title: "Thành công", message: "Sửa thành công"){
+                            _ in
+                            self.hideLoading()
+                        }
                         self.clearForm()
                         self.iSelect = -1
                         self.loadData()

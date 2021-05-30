@@ -9,7 +9,7 @@
 import UIKit
 
 class KhachHangViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-   
+    
     //Anh xa view
     @IBOutlet weak var tfTen: CustomTextField!
     @IBOutlet weak var tfSDT: CustomTextField!
@@ -46,14 +46,21 @@ class KhachHangViewController: UIViewController, UITableViewDelegate, UITableVie
     //Ham them
     func themKhachHang() {
         if let kh = getAdd() {
+            showLoading(title: "Đang thêm, Đợi tí...")
             db?.addKhachHang(kh: kh, completion: { (error) in
                 if error == nil {
                     self.loadData()
                     self.iSelect = -1
                     self.clearForm()
-                    self.showAlert(title: "Thành công", message: "Thêm thành công")
+                    self.showAlert(title: "Thành công", message: "Thêm thành công") {
+                        _ in
+                        self.hideLoading()
+                    }
                 }else{
-                    self.showAlert(title: "Thất bại", message: "Thêm thất bại")
+                    self.showAlert(title: "Thất bại", message: "Thêm thất bại") {
+                        _ in
+                        self.hideLoading()
+                    }
                 }
             })
         }
@@ -62,14 +69,21 @@ class KhachHangViewController: UIViewController, UITableViewDelegate, UITableVie
     //Ham sua
     func suaKhachHang() {
         if let kh = getEdit() {
+            showLoading(title: "Đang sửa, Đợi tí...")
             db?.editKhachHang(kh: kh, completion: { (error) in
                 if error == nil {
                     self.loadData()
                     self.clearForm()
                     self.iSelect = -1
-                    self.showAlert(title: "Thành công", message: "Sửa thành công")
+                    self.showAlert(title: "Thành công", message: "Sửa thành công") {
+                        _ in
+                        self.hideLoading()
+                    }
                 }else{
-                    self.showAlert(title: "Thất bại", message: "Sửa thất bại")
+                    self.showAlert(title: "Thất bại", message: "Sửa thất bại") {
+                        _ in
+                        self.hideLoading()
+                    }
                 }
             })
         }
@@ -107,13 +121,13 @@ class KhachHangViewController: UIViewController, UITableViewDelegate, UITableVie
     func getAdd() -> KhachHang? {
         //kiem tra form co trong khong
         if tfTen.text == "" || tfSDT.text == "" {
-            showAlert(title: "Chú ý", message: "Phải nhập đủ dữ liệu")
+            showAlert(title: "Chú ý", message: "Phải nhập đủ dữ liệu", action: nil)
             return nil
         }
         
         //Kiem tra dinh dang SDT
         if !tfSDT.text!.isValidSDT() {
-            showAlert(title: "Chú ý", message: "SDT không hợp lệ")
+            showAlert(title: "Chú ý", message: "SDT không hợp lệ", action: nil)
             return nil
         }
         
@@ -123,29 +137,64 @@ class KhachHangViewController: UIViewController, UITableViewDelegate, UITableVie
     func getEdit() -> KhachHang? {
         //kiem tra form co trong khong
         if tfTen.text == "" || tfSDT.text == "" {
-            showAlert(title: "Chú ý", message: "Phải nhập đủ dữ liệu")
+            showAlert(title: "Chú ý", message: "Phải nhập đủ dữ liệu", action: nil)
             return nil
         }
         
         //Kiem tra dinh dang SDT
         if !tfSDT.text!.isValidSDT() {
-            showAlert(title: "Chú ý", message: "SDT không hợp lệ")
+            showAlert(title: "Chú ý", message: "SDT không hợp lệ", action: nil)
             return nil
         }
         
         //Kiem tra index neu bang -1 thi return ve nil
         if iSelect == -1 {
-            showAlert(title: "Chú ý", message: "Không nhân dang được id")
+            showAlert(title: "Chú ý", message: "Không nhân dang được id", action: nil)
             return nil
         }
         
         return KhachHang(id: arrKH[iSelect].id, hoTen: tfTen.text!, sdt: tfSDT.text!)
     }
-
-    //Show alert
-    func showAlert(title: String, message: String) {
+    
+    var viewLoading: UIView?
+    var lable: UILabel?
+    func showLoading(title: String) {
+        if let viewLoading = viewLoading, let lable = lable {
+            lable.text = title
+            viewLoading.isHidden = false
+        } else {
+            viewLoading = UIView()
+            viewLoading!.frame = view.frame
+            viewLoading!.backgroundColor = UIColor(red: 100/255, green: 100/255, blue: 100/255, alpha: 0.5)
+            
+            let width = UIScreen.main.bounds.width
+            let height = UIScreen.main.bounds.height
+            
+            lable = UILabel()
+            lable!.frame = CGRect(x: (width * 0.2) / 2, y: (height * 0.9) / 2, width: width * 0.8, height: height * 0.1)
+            lable!.text = title
+            lable!.textAlignment = .center
+            lable!.textColor = .white
+            lable!.font = UIFont.boldSystemFont(ofSize: 20.0)
+            
+            viewLoading?.addSubview(lable!)
+            view.addSubview(viewLoading!)
+        }
+    }
+    
+    func hideLoading() {
+        if let viewLoading = viewLoading {
+            viewLoading.isHidden = true
+        }
+    }
+    
+    //hien thi thong bao
+    func showAlert(title: String, message: String, action: ((UIAlertAction)->())?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default) {
+            ac in
+            action?(ac)
+        })
         self.present(alert, animated: true, completion: nil)
     }
     

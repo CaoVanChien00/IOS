@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DD8-g1-x9Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eNL-kq-Fka">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -736,107 +736,246 @@
             <objects>
                 <viewController id="DD8-g1-x9Z" customClass="AddVatLieuViewController" customModule="Quan_Ly_Ban_Hang_Vat_Lieu_Xay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Cy-Hd-7W9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="950"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cU-3G-FAT">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="872"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XrL-UX-HnT">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="920"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ybx-ig-SGm">
-                                                <rect key="frame" x="97" y="39" width="200" height="200"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Ybx-ig-SGm" secondAttribute="height" multiplier="1:1" id="2bL-bg-rUc"/>
-                                                    <constraint firstAttribute="width" constant="200" id="m9k-Rv-IQ6"/>
-                                                </constraints>
-                                            </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tên" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dfQ-ex-NZL" customClass="CustomTextField" customModule="Quan_Ly_Ban_Hang_Vat_Lieu_Xay" customModuleProvider="target">
-                                                <rect key="frame" x="75" y="270" width="269" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="Delete"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
-                                                        <real key="value" value="8"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CIC-d6-oVm">
-                                                <rect key="frame" x="10" y="308" width="394" height="168"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="s2b-gr-302">
+                                                <rect key="frame" x="15" y="20" width="384" height="874"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="KDm-r1-kLS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="123" height="32"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Ybx-ig-SGm">
+                                                        <rect key="frame" x="92" y="0.0" width="200" height="200"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Ybx-ig-SGm" secondAttribute="height" multiplier="1:1" id="2bL-bg-rUc"/>
+                                                            <constraint firstAttribute="width" constant="200" id="m9k-Rv-IQ6"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PzB-bB-FFZ">
+                                                        <rect key="frame" x="5" y="230" width="374" height="584"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông tin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwD-3f-WfL">
-                                                                <rect key="frame" x="0.0" y="0.0" width="73" height="32"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tên" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dfQ-ex-NZL" customClass="CustomTextField" customModule="Quan_Ly_Ban_Hang_Vat_Lieu_Xay" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.84704088180000003" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="55S-kr-3ht">
-                                                                <rect key="frame" x="91" y="0.0" width="32" height="32"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="VatLieu"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Số lượng" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X6m-RI-rRf" customClass="CustomTextField" customModule="Quan_Ly_Ban_Hang_Vat_Lieu_Xay" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="40" width="374" height="30"/>
+                                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.84704088180000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="Number"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Đơn giá" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dxP-gn-fEl" customClass="CustomTextField" customModule="Quan_Ly_Ban_Hang_Vat_Lieu_Xay" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="80" width="374" height="30"/>
+                                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.84704088180000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="Money"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="CIC-d6-oVm" customClass="CustomStackView" customModule="Quan_Ly_Ban_Hang_Vat_Lieu_Xay" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="120" width="374" height="180"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="KDm-r1-kLS">
+                                                                        <rect key="frame" x="8" y="8" width="123" height="32"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông tin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwD-3f-WfL">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="73" height="32"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Info" translatesAutoresizingMaskIntoConstraints="NO" id="55S-kr-3ht">
+                                                                                <rect key="frame" x="91" y="0.0" width="32" height="32"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="32" id="Uky-sY-Fki"/>
+                                                                                    <constraint firstAttribute="width" secondItem="55S-kr-3ht" secondAttribute="height" multiplier="1:1" id="vzv-E1-7HT"/>
+                                                                                </constraints>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="123" id="CfX-Ng-9AA"/>
+                                                                        </constraints>
+                                                                    </stackView>
+                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ytP-Hx-veL" customClass="CustomTextView" customModule="Quan_Ly_Ban_Hang_Vat_Lieu_Xay" customModuleProvider="target">
+                                                                        <rect key="frame" x="8" y="44" width="358" height="128"/>
+                                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.84704088184931503" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="128" id="tAe-ah-H9o"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Thông tin"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="boder">
+                                                                                <real key="value" value="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </textView>
+                                                                </subviews>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="32" id="Uky-sY-Fki"/>
-                                                                    <constraint firstAttribute="width" secondItem="55S-kr-3ht" secondAttribute="height" multiplier="1:1" id="vzv-E1-7HT"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="ytP-Hx-veL" secondAttribute="trailing" constant="8" id="d87-6i-NWk"/>
+                                                                    <constraint firstItem="ytP-Hx-veL" firstAttribute="leading" secondItem="CIC-d6-oVm" secondAttribute="leading" constant="8" id="dM2-ku-bfA"/>
                                                                 </constraints>
-                                                            </imageView>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                        <color key="value" red="0.75677937269999995" green="0.7569108605" blue="0.75677114729999995" alpha="0.34891374139999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBackground" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                        <real key="value" value="6"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="tw5-fH-5f3" customClass="CustomStackView" customModule="Quan_Ly_Ban_Hang_Vat_Lieu_Xay" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="310" width="374" height="132"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="zXs-dK-ZdV">
+                                                                        <rect key="frame" x="8" y="8" width="135" height="32"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đơn vị tính" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfQ-d0-Hba">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="85" height="32"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Unit" translatesAutoresizingMaskIntoConstraints="NO" id="gQe-uV-5Q5">
+                                                                                <rect key="frame" x="103" y="0.0" width="32" height="32"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="32" id="4rm-aD-Cv3"/>
+                                                                                    <constraint firstAttribute="width" secondItem="gQe-uV-5Q5" secondAttribute="height" multiplier="1:1" id="Bvm-L6-uvX"/>
+                                                                                </constraints>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="135" id="0hd-Vw-dhh"/>
+                                                                        </constraints>
+                                                                    </stackView>
+                                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqd-aS-7aa">
+                                                                        <rect key="frame" x="8" y="44" width="358" height="80"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="80" id="216-A3-MEt"/>
+                                                                        </constraints>
+                                                                    </pickerView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="iqd-aS-7aa" secondAttribute="trailing" constant="8" id="Hnc-zS-YWO"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCustom" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                        <color key="value" red="0.75677937269999995" green="0.7569108605" blue="0.75677114729999995" alpha="0.34891374143835618" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                        <real key="value" value="6"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBackground" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="PuW-Dh-NcC" customClass="CustomStackView" customModule="Quan_Ly_Ban_Hang_Vat_Lieu_Xay" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="452" width="374" height="132"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="tWd-A8-HNN">
+                                                                        <rect key="frame" x="8" y="8" width="160" height="32"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhà cung cấp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDL-ss-A4Z">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="110" height="32"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NhaCungCap" translatesAutoresizingMaskIntoConstraints="NO" id="iiH-JV-tk9">
+                                                                                <rect key="frame" x="128" y="0.0" width="32" height="32"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="iiH-JV-tk9" secondAttribute="height" multiplier="1:1" id="Ekw-wt-17N"/>
+                                                                                    <constraint firstAttribute="width" constant="32" id="zA8-ci-Lgi"/>
+                                                                                </constraints>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="160" id="cqQ-2e-aXP"/>
+                                                                        </constraints>
+                                                                    </stackView>
+                                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8I-6i-dUh">
+                                                                        <rect key="frame" x="8" y="44" width="358" height="80"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="80" id="PJC-dW-EB8"/>
+                                                                        </constraints>
+                                                                    </pickerView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="u8I-6i-dUh" secondAttribute="trailing" constant="8" id="YOy-Bs-mlR"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                        <color key="value" red="0.75677937269999995" green="0.7569108605" blue="0.75677114729999995" alpha="0.34891374139999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBackground" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                        <real key="value" value="6"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </stackView>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="123" id="CfX-Ng-9AA"/>
-                                                        </constraints>
                                                     </stackView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ytP-Hx-veL" customClass="CustomTextView" customModule="Quan_Ly_Ban_Hang_Vat_Lieu_Xay" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="40" width="394" height="128"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="128" id="tAe-ah-H9o"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Thông tin"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="boder">
-                                                                <real key="value" value="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </textView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hox-TQ-Uwc">
+                                                        <rect key="frame" x="172" y="844" width="40" height="30"/>
+                                                        <state key="normal" title="Thêm"/>
+                                                        <connections>
+                                                            <action selector="btnThem:" destination="DD8-g1-x9Z" eventType="touchUpInside" id="XD0-K8-CSm"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="ytP-Hx-veL" secondAttribute="trailing" id="9hd-mc-cEr"/>
+                                                    <constraint firstAttribute="trailing" secondItem="PzB-bB-FFZ" secondAttribute="trailing" constant="5" id="JzU-Vx-DdO"/>
+                                                    <constraint firstItem="PzB-bB-FFZ" firstAttribute="leading" secondItem="s2b-gr-302" secondAttribute="leading" constant="5" id="ZIs-lJ-73P"/>
                                                 </constraints>
                                             </stackView>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tên" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X6m-RI-rRf" customClass="CustomTextField" customModule="Quan_Ly_Ban_Hang_Vat_Lieu_Xay" customModuleProvider="target">
-                                                <rect key="frame" x="81" y="484" width="269" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="Delete"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
-                                                        <real key="value" value="8"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tên" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YM4-ag-ztd" customClass="CustomTextField" customModule="Quan_Ly_Ban_Hang_Vat_Lieu_Xay" customModuleProvider="target">
-                                                <rect key="frame" x="81" y="522" width="269" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="Delete"/>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
-                                                        <real key="value" value="8"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="s2b-gr-302" firstAttribute="top" secondItem="XrL-UX-HnT" secondAttribute="top" constant="20" id="0hg-ph-op9"/>
+                                            <constraint firstAttribute="trailing" secondItem="s2b-gr-302" secondAttribute="trailing" constant="15" id="BE2-vV-GHb"/>
+                                            <constraint firstItem="s2b-gr-302" firstAttribute="leading" secondItem="XrL-UX-HnT" secondAttribute="leading" constant="15" id="H8f-wx-bQD"/>
+                                            <constraint firstItem="s2b-gr-302" firstAttribute="centerX" secondItem="XrL-UX-HnT" secondAttribute="centerX" id="LhZ-f4-w3a"/>
+                                            <constraint firstAttribute="bottom" secondItem="s2b-gr-302" secondAttribute="bottom" constant="26" id="sfd-iv-UQh"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -858,6 +997,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GcY-ag-keg"/>
                     </view>
+                    <size key="freeformSize" width="414" height="950"/>
+                    <connections>
+                        <outlet property="imageVatLieu" destination="Ybx-ig-SGm" id="xsP-RG-wfl"/>
+                        <outlet property="pkDVT" destination="iqd-aS-7aa" id="mjc-eS-17A"/>
+                        <outlet property="pkNCC" destination="u8I-6i-dUh" id="Bx6-CQ-Hai"/>
+                        <outlet property="tfDonGia" destination="dxP-gn-fEl" id="cgh-n1-06R"/>
+                        <outlet property="tfSoLuong" destination="X6m-RI-rRf" id="Zzl-gs-eZh"/>
+                        <outlet property="tfTen" destination="dfQ-ex-NZL" id="52K-gg-6d1"/>
+                        <outlet property="tvThongTin" destination="ytP-Hx-veL" id="W7G-Py-dLh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qAp-Gb-t0X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -868,9 +1017,15 @@
         <image name="Delete" width="32" height="32"/>
         <image name="DiaChi" width="256" height="256"/>
         <image name="Email" width="256" height="256"/>
+        <image name="Image" width="256" height="256"/>
+        <image name="Info" width="256" height="256"/>
+        <image name="Money" width="256" height="256"/>
         <image name="NhaCungCap" width="256" height="256"/>
+        <image name="Number" width="256" height="256"/>
         <image name="Password" width="256" height="256"/>
         <image name="Phone" width="256" height="256"/>
         <image name="TaiKhoan" width="256" height="256"/>
+        <image name="Unit" width="256" height="256"/>
+        <image name="VatLieu" width="256" height="256"/>
     </resources>
 </document>

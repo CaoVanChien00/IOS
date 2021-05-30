@@ -10,6 +10,7 @@ import Firebase
 
 class DBVatLieu {
     var db = Firestore.firestore().collection("VatLieu")
+    var storage = Storage.storage()
     
     func addVatLieu(vl: VatLieu, completion: @escaping (Error?)->()) {
         let id = db.document().documentID
@@ -19,6 +20,20 @@ class DBVatLieu {
             error in
             completion(error)
         }
+    }
+    
+    func uploadImage(image: UIImage, name: String, completion: @escaping (String?)->()) {
+        let ref = storage.reference().child("images/" + name)
+        let uploadTask = ref.putData(image.jpegData(compressionQuality: 1)!, metadata: nil) { (metadata, error) in
+            if let _ = metadata, error == nil {
+                ref.downloadURL(completion: { (url, error) in
+                    if let url = url, error == nil {
+                        completion(url.absoluteString)
+                    }
+                })
+            }
+        }
+        uploadTask.resume()
     }
     
     func delVatLieu(id: String, completion: @escaping (Error?)->()) {
