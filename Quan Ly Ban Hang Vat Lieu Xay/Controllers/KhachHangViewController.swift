@@ -224,6 +224,8 @@ class KhachHangViewController: UIViewController, UITableViewDelegate, UITableVie
         }else if iSelect == indexPath.row {
             iSelect = -1
             btnActi.setTitle("Thêm", for: .normal)
+        }else {
+            iSelect = indexPath.row
         }
         iSelect != -1 ? uploadForm() : clearForm()
     }

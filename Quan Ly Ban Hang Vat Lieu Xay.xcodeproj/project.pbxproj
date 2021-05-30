@@ -26,6 +26,7 @@
 		22D9B7AA26625810005026AF /* DBVatLieu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D9B7A926625810005026AF /* DBVatLieu.swift */; };
 		22D9B7AC26625A18005026AF /* AddVatLieuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D9B7AB26625A18005026AF /* AddVatLieuViewController.swift */; };
 		22DED11226632540008BEDA2 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DED11126632540008BEDA2 /* CustomStackView.swift */; };
+		22DED114266339B5008BEDA2 /* EditVatLieuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DED113266339B5008BEDA2 /* EditVatLieuViewController.swift */; };
 		22E844DC26619BA2008850EF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E844DB26619BA2008850EF /* CustomTextField.swift */; };
 		22E844DF2661A6D3008850EF /* DBNhanVien.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E844DE2661A6D3008850EF /* DBNhanVien.swift */; };
 		22E844E12661AF68008850EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22E844E02661AF68008850EF /* GoogleService-Info.plist */; };
@@ -73,6 +74,7 @@
 		22D9B7A926625810005026AF /* DBVatLieu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBVatLieu.swift; sourceTree = "<group>"; };
 		22D9B7AB26625A18005026AF /* AddVatLieuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVatLieuViewController.swift; sourceTree = "<group>"; };
 		22DED11126632540008BEDA2 /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
+		22DED113266339B5008BEDA2 /* EditVatLieuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVatLieuViewController.swift; sourceTree = "<group>"; };
 		22E844DB26619BA2008850EF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		22E844DE2661A6D3008850EF /* DBNhanVien.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBNhanVien.swift; sourceTree = "<group>"; };
 		22E844E02661AF68008850EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				22B8C1BE266236BB00733244 /* KhachHangViewController.swift */,
 				22B8C1C026623E9A00733244 /* KhachHangTableViewCell.swift */,
 				22D9B7AB26625A18005026AF /* AddVatLieuViewController.swift */,
+				22DED113266339B5008BEDA2 /* EditVatLieuViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				22E844DC26619BA2008850EF /* CustomTextField.swift in Sources */,
 				22B8C1BF266236BB00733244 /* KhachHangViewController.swift in Sources */,
 				22B8C1C126623E9A00733244 /* KhachHangTableViewCell.swift in Sources */,
+				22DED114266339B5008BEDA2 /* EditVatLieuViewController.swift in Sources */,
 				2225D9DC266134FD00FD018B /* VatLieu.swift in Sources */,
 				2225D9E02661437F00FD018B /* LichSu.swift in Sources */,
 				2225D9B62661327100FD018B /* AppDelegate.swift in Sources */,

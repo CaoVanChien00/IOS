@@ -62,6 +62,14 @@ class DBVatLieu {
         }
     }
     
+    func getVatLieuID(id: String, completion: @escaping (VatLieu?)->()) {
+        db.document(id).getDocument { (snap, error) in
+            if let snap = snap, error == nil {
+                completion(VatLieu(data: snap.data()!))
+            }
+        }
+    }
+    
     func search(key: String, completion: @escaping ([VatLieu]?)->()) {
         db.getDocuments { (snap, error) in
             if let snap = snap?.documents, error == nil {

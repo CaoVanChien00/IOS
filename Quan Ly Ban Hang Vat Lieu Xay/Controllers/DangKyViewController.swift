@@ -99,7 +99,7 @@ extension String {
     }
     
     func isValidSDT() -> Bool {
-        let regex = try! NSRegularExpression(pattern: "[^0-9]", options: .caseInsensitive)
+        let regex = try! NSRegularExpression(pattern: "[^0-9.]", options: .caseInsensitive)
         return regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: count)) == nil
     }
 }
