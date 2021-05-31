@@ -18,6 +18,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        //Check dang nhap
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        
+        if let _ = Auth.auth().currentUser {
+            let viewController = storyboard.instantiateViewController(withIdentifier: "MenuVC")
+            let navigationController = UINavigationController.init(rootViewController: viewController)
+            self.window?.rootViewController = navigationController
+        } else {
+            let viewController = storyboard.instantiateViewController(withIdentifier: "DangNhap")
+            self.window?.rootViewController = viewController
+        }
+        
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

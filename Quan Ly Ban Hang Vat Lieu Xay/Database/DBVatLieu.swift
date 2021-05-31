@@ -24,7 +24,7 @@ class DBVatLieu {
     
     func uploadImage(image: UIImage, name: String, completion: @escaping (String?)->()) {
         let ref = storage.reference().child("images/" + name)
-        let uploadTask = ref.putData(image.jpegData(compressionQuality: 1)!, metadata: nil) { (metadata, error) in
+        let uploadTask = ref.putData(image.jpegData(compressionQuality: 0.3)!, metadata: nil) { (metadata, error) in
             if let _ = metadata, error == nil {
                 ref.downloadURL(completion: { (url, error) in
                     if let url = url, error == nil {

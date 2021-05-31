@@ -15,6 +15,7 @@ class DangNhapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     //Noi xay ra hanh dong dang nhap
@@ -26,6 +27,9 @@ class DangNhapViewController: UIViewController {
                     self.showAlert(title: "Đăng nhập thất bại", message: "Sai tài khoản hoặc mật khẩu")
                     return
                 }
+                let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MenuVC")
+                let navigration = UINavigationController(rootViewController: viewController!)
+                UIApplication.shared.keyWindow?.rootViewController = navigration
             }
         }
         

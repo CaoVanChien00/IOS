@@ -21,6 +21,7 @@ class AddVatLieuViewController: UIViewController, PickerDelegate, UIImagePickerC
     
     var nhaCungCap = ""
     var donViTinh = ""
+    var vc: ListVatLieuViewController?
     
     //Set data cho picker view
     private let dataDVT = DataPickerDVT()
@@ -93,7 +94,6 @@ class AddVatLieuViewController: UIViewController, PickerDelegate, UIImagePickerC
     //Ham su kien cua image view qua gesture
     @objc func actionImageClick(_ sender: UITapGestureRecognizer) {
         //Tao ra Image picker
-        print("sda")
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
         
@@ -143,6 +143,8 @@ class AddVatLieuViewController: UIViewController, PickerDelegate, UIImagePickerC
                             self.showAlert(title: "Thành công", message: "Thêm vật liệu thành công"){
                                 _ in
                                 self.hideLoading()
+                                self.vc?.loadData()
+                                self.navigationController?.popViewController(animated: true)
                             }
                         }else {
                             self.showAlert(title: "Lôi thêm vật liệu", message: "Thêm vật liệu không thành công"){

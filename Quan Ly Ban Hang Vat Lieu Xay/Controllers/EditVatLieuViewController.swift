@@ -113,6 +113,8 @@ class EditVatLieuViewController: UIViewController , UIImagePickerControllerDeleg
         present(imagePicker, animated: true, completion: nil)
     }
     
+    
+    
     //Potocol
     func select(index: Int, picker: Picker) {
         switch picker {
@@ -182,6 +184,7 @@ class EditVatLieuViewController: UIViewController , UIImagePickerControllerDeleg
                         if error == nil {
                             self.showAlert(title: "Thành công", message: "sửa vật liệu thành công"){
                                 _ in
+                                self.navigationController?.popViewController(animated: true)
                                 self.hideLoading()
                             }
                         }else {

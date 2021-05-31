@@ -17,7 +17,18 @@
 		2225D9DA266134E500FD018B /* NhanVien.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2225D9D9266134E500FD018B /* NhanVien.swift */; };
 		2225D9DC266134FD00FD018B /* VatLieu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2225D9DB266134FD00FD018B /* VatLieu.swift */; };
 		2225D9DE2661407600FD018B /* HoaDon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2225D9DD2661407600FD018B /* HoaDon.swift */; };
-		2225D9E02661437F00FD018B /* LichSu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2225D9DF2661437F00FD018B /* LichSu.swift */; };
+		22436C16266472D400966F56 /* KhachHangHDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22436C15266472D400966F56 /* KhachHangHDTableViewCell.swift */; };
+		22436C1826648D1100966F56 /* DBHoaDon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22436C1726648D1100966F56 /* DBHoaDon.swift */; };
+		22436C1A2664927800966F56 /* HoaDonXemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22436C192664927800966F56 /* HoaDonXemViewController.swift */; };
+		226BA1322663CC5B00D93D39 /* SanPhamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226BA1312663CC5B00D93D39 /* SanPhamTableViewCell.swift */; };
+		226BA1342663CD0D00D93D39 /* HoaDonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226BA1332663CD0D00D93D39 /* HoaDonViewController.swift */; };
+		226DCFB626636D0800687527 /* ListVatLieuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DCFB526636D0800687527 /* ListVatLieuViewController.swift */; };
+		226DCFB826636D5100687527 /* VatLieuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DCFB726636D5100687527 /* VatLieuTableViewCell.swift */; };
+		226DCFBA266387EE00687527 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DCFB9266387EE00687527 /* CustomView.swift */; };
+		226DCFBC2663891D00687527 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DCFBB2663891D00687527 /* HomeViewController.swift */; };
+		226DCFBE266389C500687527 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DCFBD266389C500687527 /* MenuCollectionViewCell.swift */; };
+		227307FB2664AEC9008B9781 /* ListHoaDonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227307FA2664AEC9008B9781 /* ListHoaDonTableViewCell.swift */; };
+		227307FD2664AFD4008B9781 /* ListHoaDonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227307FC2664AFD4008B9781 /* ListHoaDonViewController.swift */; };
 		22A35D4426626D64001C5991 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A35D4326626D64001C5991 /* CustomTextView.swift */; };
 		22B8C1BD266233D300733244 /* DBKhachHang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B8C1BC266233D300733244 /* DBKhachHang.swift */; };
 		22B8C1BF266236BB00733244 /* KhachHangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B8C1BE266236BB00733244 /* KhachHangViewController.swift */; };
@@ -65,7 +76,18 @@
 		2225D9D9266134E500FD018B /* NhanVien.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NhanVien.swift; sourceTree = "<group>"; };
 		2225D9DB266134FD00FD018B /* VatLieu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VatLieu.swift; sourceTree = "<group>"; };
 		2225D9DD2661407600FD018B /* HoaDon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoaDon.swift; sourceTree = "<group>"; };
-		2225D9DF2661437F00FD018B /* LichSu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LichSu.swift; sourceTree = "<group>"; };
+		22436C15266472D400966F56 /* KhachHangHDTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KhachHangHDTableViewCell.swift; sourceTree = "<group>"; };
+		22436C1726648D1100966F56 /* DBHoaDon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHoaDon.swift; sourceTree = "<group>"; };
+		22436C192664927800966F56 /* HoaDonXemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoaDonXemViewController.swift; sourceTree = "<group>"; };
+		226BA1312663CC5B00D93D39 /* SanPhamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanPhamTableViewCell.swift; sourceTree = "<group>"; };
+		226BA1332663CD0D00D93D39 /* HoaDonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoaDonViewController.swift; sourceTree = "<group>"; };
+		226DCFB526636D0800687527 /* ListVatLieuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVatLieuViewController.swift; sourceTree = "<group>"; };
+		226DCFB726636D5100687527 /* VatLieuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VatLieuTableViewCell.swift; sourceTree = "<group>"; };
+		226DCFB9266387EE00687527 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		226DCFBB2663891D00687527 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		226DCFBD266389C500687527 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		227307FA2664AEC9008B9781 /* ListHoaDonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHoaDonTableViewCell.swift; sourceTree = "<group>"; };
+		227307FC2664AFD4008B9781 /* ListHoaDonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHoaDonViewController.swift; sourceTree = "<group>"; };
 		22A35D4326626D64001C5991 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		22B8C1BC266233D300733244 /* DBKhachHang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBKhachHang.swift; sourceTree = "<group>"; };
 		22B8C1BE266236BB00733244 /* KhachHangViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KhachHangViewController.swift; sourceTree = "<group>"; };
@@ -182,7 +204,6 @@
 				2225D9D9266134E500FD018B /* NhanVien.swift */,
 				2225D9DB266134FD00FD018B /* VatLieu.swift */,
 				2225D9DD2661407600FD018B /* HoaDon.swift */,
-				2225D9DF2661437F00FD018B /* LichSu.swift */,
 				22E844E62661D589008850EF /* NhaCungCap.swift */,
 			);
 			path = Models;
@@ -199,6 +220,16 @@
 				22B8C1C026623E9A00733244 /* KhachHangTableViewCell.swift */,
 				22D9B7AB26625A18005026AF /* AddVatLieuViewController.swift */,
 				22DED113266339B5008BEDA2 /* EditVatLieuViewController.swift */,
+				226DCFB526636D0800687527 /* ListVatLieuViewController.swift */,
+				226DCFB726636D5100687527 /* VatLieuTableViewCell.swift */,
+				226DCFBB2663891D00687527 /* HomeViewController.swift */,
+				226DCFBD266389C500687527 /* MenuCollectionViewCell.swift */,
+				226BA1312663CC5B00D93D39 /* SanPhamTableViewCell.swift */,
+				226BA1332663CD0D00D93D39 /* HoaDonViewController.swift */,
+				22436C15266472D400966F56 /* KhachHangHDTableViewCell.swift */,
+				22436C192664927800966F56 /* HoaDonXemViewController.swift */,
+				227307FA2664AEC9008B9781 /* ListHoaDonTableViewCell.swift */,
+				227307FC2664AFD4008B9781 /* ListHoaDonViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -210,6 +241,7 @@
 				22E844E22661C1D6008850EF /* CustomButton.swift */,
 				22A35D4326626D64001C5991 /* CustomTextView.swift */,
 				22DED11126632540008BEDA2 /* CustomStackView.swift */,
+				226DCFB9266387EE00687527 /* CustomView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -221,6 +253,7 @@
 				22E844E82661D8F4008850EF /* DBNhaCungCap.swift */,
 				22B8C1BC266233D300733244 /* DBKhachHang.swift */,
 				22D9B7A926625810005026AF /* DBVatLieu.swift */,
+				22436C1726648D1100966F56 /* DBHoaDon.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -404,28 +437,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				22D9B7AA26625810005026AF /* DBVatLieu.swift in Sources */,
+				226BA1342663CD0D00D93D39 /* HoaDonViewController.swift in Sources */,
 				2225D9DA266134E500FD018B /* NhanVien.swift in Sources */,
+				226BA1322663CC5B00D93D39 /* SanPhamTableViewCell.swift in Sources */,
 				2225D9D8266134B100FD018B /* KhachHang.swift in Sources */,
 				22D9B7AC26625A18005026AF /* AddVatLieuViewController.swift in Sources */,
 				22DED11226632540008BEDA2 /* CustomStackView.swift in Sources */,
 				22E844E92661D8F4008850EF /* DBNhaCungCap.swift in Sources */,
 				2225D9B82661327100FD018B /* DangKyViewController.swift in Sources */,
+				226DCFB626636D0800687527 /* ListVatLieuViewController.swift in Sources */,
+				226DCFB826636D5100687527 /* VatLieuTableViewCell.swift in Sources */,
+				227307FB2664AEC9008B9781 /* ListHoaDonTableViewCell.swift in Sources */,
 				22E844EB2661E637008850EF /* QLNhaCungCapViewController.swift in Sources */,
 				22D8F9932661E94D00FBF0C6 /* NhaCungCapTableViewCell.swift in Sources */,
 				22E844E72661D589008850EF /* NhaCungCap.swift in Sources */,
 				2225D9DE2661407600FD018B /* HoaDon.swift in Sources */,
 				22E844E52661C6F0008850EF /* DangNhapViewController.swift in Sources */,
+				226DCFBC2663891D00687527 /* HomeViewController.swift in Sources */,
+				226DCFBE266389C500687527 /* MenuCollectionViewCell.swift in Sources */,
 				22A35D4426626D64001C5991 /* CustomTextView.swift in Sources */,
 				22E844E32661C1D6008850EF /* CustomButton.swift in Sources */,
 				22E844DF2661A6D3008850EF /* DBNhanVien.swift in Sources */,
 				22E844DC26619BA2008850EF /* CustomTextField.swift in Sources */,
 				22B8C1BF266236BB00733244 /* KhachHangViewController.swift in Sources */,
+				22436C16266472D400966F56 /* KhachHangHDTableViewCell.swift in Sources */,
+				226DCFBA266387EE00687527 /* CustomView.swift in Sources */,
+				22436C1826648D1100966F56 /* DBHoaDon.swift in Sources */,
+				22436C1A2664927800966F56 /* HoaDonXemViewController.swift in Sources */,
 				22B8C1C126623E9A00733244 /* KhachHangTableViewCell.swift in Sources */,
 				22DED114266339B5008BEDA2 /* EditVatLieuViewController.swift in Sources */,
 				2225D9DC266134FD00FD018B /* VatLieu.swift in Sources */,
-				2225D9E02661437F00FD018B /* LichSu.swift in Sources */,
 				2225D9B62661327100FD018B /* AppDelegate.swift in Sources */,
 				22B8C1BD266233D300733244 /* DBKhachHang.swift in Sources */,
+				227307FD2664AFD4008B9781 /* ListHoaDonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
