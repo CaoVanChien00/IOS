@@ -32,13 +32,15 @@ class DangKyViewController: UIViewController {
                     nhanVien.id = user.uid
                     db.addNhanVien(nhanVien: nhanVien) {error in
                         if error == nil {
-                            self.showAlert(title: "Thành công", message: "Tao Tài khoản thành công")
+                            self.showAlert(title: "Thành công", message: "Tao Tài khoản thành công") {
+                                self.dismiss(animated: true, completion: nil)
+                            }
                         } else {
-                            self.showAlert(title: "Thất bại", message: "Tao Tài khoản thất bại")
+                            self.showAlert(title: "Thất bại", message: "Tao Tài khoản thất bại", action: nil)
                         }
                     }
                 } else {
-                    self.showAlert(title: "Lỗi tạo tài khoản", message: "Email đã được sữ dụng, và cũng có thể là lỗi server. Xin thử lại sau ít phút")
+                    self.showAlert(title: "Lỗi tạo tài khoản", message: "Email đã được sữ dụng, và cũng có thể là lỗi server. Xin thử lại sau ít phút", action: nil)
                 }
             }
         }
@@ -57,25 +59,25 @@ class DangKyViewController: UIViewController {
         if  tfEmail.text == "" || tfMatKhau.text != tfMatKhau1.text ||
             tfDiaChi.text == "" || tfMatKhau1.text == "" ||
             tfMatKhau.text == "" {
-            showAlert(title: "Chú ý", message: "Chưa nhập đầy đủ thông tin")
+            showAlert(title: "Chú ý", message: "Chưa nhập đầy đủ thông tin", action: nil)
             return nil
         }
         
         //Kiem tra dinh dang mail
         if !tfEmail.text!.isValidEmail(){
-            showAlert(title: "Chú ý", message: "Sai định dạng email")
+            showAlert(title: "Chú ý", message: "Sai định dạng email", action: nil)
             return nil
         }
         
         //Kiem tra 2 mat khau nhap vao la bang nhau
         if tfMatKhau.text! != tfMatKhau1.text! {
-            showAlert(title: "Chú ý", message: "Mật khẩu không khớp")
+            showAlert(title: "Chú ý", message: "Mật khẩu không khớp", action: nil)
             return nil
         }
         
         //kiem tra mat khau phai lon hon 6 ki tu
         if tfMatKhau.text!.count < 6 {
-            showAlert(title: "Chú ý", message: "Mật khẩu phải dài hơn hoặc bằng 6 ký tự")
+            showAlert(title: "Chú ý", message: "Mật khẩu phải dài hơn hoặc bằng 6 ký tự", action: nil)
             return nil
         }
         
@@ -83,9 +85,11 @@ class DangKyViewController: UIViewController {
     }
     
     //Hien thi alert
-    func showAlert(title: String, message: String) {
+    func showAlert(title: String, message: String, action: (()->())?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+            action?()
+        }))
         self.present(alert, animated: true, completion: nil)
     }
 }
