@@ -33,6 +33,7 @@ class DangKyViewController: UIViewController {
                     db.addNhanVien(nhanVien: nhanVien) {error in
                         if error == nil {
                             self.showAlert(title: "Thành công", message: "Tao Tài khoản thành công") {
+                                
                                 self.dismiss(animated: true, completion: nil)
                             }
                         } else {

@@ -118,6 +118,7 @@ class ListVatLieuViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "SuaVatLieu") as! EditVatLieuViewController
             vc.id = arr[indexPath.row].id
+            vc.parentVC = self
             navigationController?.pushViewController(vc, animated: true)
         
     }

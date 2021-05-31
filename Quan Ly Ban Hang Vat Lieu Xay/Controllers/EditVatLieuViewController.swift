@@ -27,6 +27,8 @@ class EditVatLieuViewController: UIViewController , UIImagePickerControllerDeleg
     private let dataDVT = DataPickerDVT()
     private let dataNCC = DataPickerNCC()
     
+    var parentVC: ListVatLieuViewController?
+    
     var arrNCC = [NhaCungCap]()
     var arrDVT = [
         "Lit",
@@ -184,6 +186,7 @@ class EditVatLieuViewController: UIViewController , UIImagePickerControllerDeleg
                         if error == nil {
                             self.showAlert(title: "Thành công", message: "sửa vật liệu thành công"){
                                 _ in
+                                self.parentVC?.loadData()
                                 self.navigationController?.popViewController(animated: true)
                                 self.hideLoading()
                             }

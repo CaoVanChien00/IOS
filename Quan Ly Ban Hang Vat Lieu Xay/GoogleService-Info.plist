@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>9045265388-8gqtrjdi71m6tud0r86dfk000uj4n0sa.apps.googleusercontent.com</string>
+	<string>206238901043-fh9qnbi1db4f587c20tdg44mff90a1l5.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.9045265388-8gqtrjdi71m6tud0r86dfk000uj4n0sa</string>
+	<string>com.googleusercontent.apps.206238901043-fh9qnbi1db4f587c20tdg44mff90a1l5</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBo-dfiMw1C71l5-GgPE5pVKiqTRpnPCbI</string>
+	<string>AIzaSyB6gN0B_yXSvYfMylH0By3E3UBuseRdR50</string>
 	<key>GCM_SENDER_ID</key>
-	<string>9045265388</string>
+	<string>206238901043</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>VatLieuXayDung</string>
+	<string>vn.edu.tdc.DoAn</string>
 	<key>PROJECT_ID</key>
-	<string>vat-lieu-xay-dung</string>
+	<string>vat-lieu-xay-dung-f1928</string>
 	<key>STORAGE_BUCKET</key>
-	<string>vat-lieu-xay-dung.appspot.com</string>
+	<string>vat-lieu-xay-dung-f1928.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:9045265388:ios:fd8aab5958c2228940cec9</string>
+	<string>1:206238901043:ios:b0e952a3058716c32e9446</string>
 </dict>
 </plist>
